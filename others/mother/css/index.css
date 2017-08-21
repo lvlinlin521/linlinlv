@@ -1,0 +1,59 @@
+html,body,.box{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.box{
+    background: url("../images/bj_02.jpg") repeat-x;
+    background-size: 1px 100%;
+}
+.box>div{
+    width: 100%;
+    height: 100%;
+    padding: 1.375rem .875rem 0;
+    box-sizing: border-box;
+}
+.box>div>img:first-child{
+    width: 100%;
+    display: block;
+    position: relative;
+}
+.box>div>span{
+    display: block;
+    color: #ed7f02;
+    font-size: .7rem;
+    line-height: 100%;
+    margin: .7rem 0 .25rem 0;
+    position: relative;
+}
+.box>div>p{
+    font-size: .75rem;
+    color: #FFFFff;
+    line-height: 1rem;
+    position: relative;
+}
+.box>div>img:nth-of-type(2){
+    display: block;
+    width: 9.5rem;
+    margin: 2rem auto 0;
+}
+.meng{
+    background: url("../images/2.png") no-repeat;
+    background-size: 100% 100%;
+    background-position: left top;
+}
+#fen{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+#yin{
+    width: 2rem;
+    border-radius: 50%;
+    position: fixed;
+    top: .3rem;
+    right: .3rem;
+    box-shadow: 0 0 10px 5px black;
+}

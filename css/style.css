@@ -1,0 +1,696 @@
+.wrap {
+    width: 100%;
+    min-width: 960px;
+}
+
+.header {
+    width: 100%;
+    height: 92px;
+    background: #f9f9f9;
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    box-shadow: 0 3px 10px black;
+}
+
+.leftNode {
+    float: left;
+    margin-left: 100px;
+}
+
+.leftNode img {
+    width: 70px;
+    height: 80px;
+    margin-top: 10px;
+}
+
+#ul {
+    float: right;
+    height: 100%;
+}
+
+#ul li {
+    float: left;
+    transition-duration: .5s;
+    padding: 0px 35px 0 35px;
+    text-align: center;
+    height: 100%;
+    text-align: center;
+    line-height: 92px;
+    color: #000;
+    font-size: 18px;
+    font-weight: normal;
+    transition-duration: 0.5s;
+}
+
+#ul li:hover {
+    cursor: pointer;
+    background-position: 0 0px;
+    background-color: #f15556;
+    color: #ffffff;
+}
+
+#ul > li.navIn {
+    background: #f45154;
+    cursor: pointer;
+    color: #fff;
+}
+
+/*banner start*/
+.banner {
+    width: 100%;
+    height:100vh;
+    background: url('../img/banner.jpg') no-repeat;
+    background-position: center center;
+    position: relative;
+    background-size:100% 100%;
+}
+
+
+
+@keyframes like {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.here {
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    top: 350px;
+    left: 30%;
+    position: absolute;
+    text-shadow: 0 0 14px black;
+    transition: all 2s;
+    -webkit-animation: like 2s;
+}
+
+
+/*aboutMe start*/
+.aboutMe {
+    width: 100%;
+    height: 596px;
+}
+
+.aboutMeInner {
+    width: 900px;
+    height: 100%;
+    margin: auto;
+}
+
+.aboutCenter {
+    margin: auto;
+}
+
+.line {
+    width: 76px;
+    height: 2px;
+    background: #372d38;
+    margin: 22px auto;
+}
+
+.small {
+    text-align: center;
+    font-size: 14px;
+}
+
+.aboutLin {
+    width: 100%;
+    height: 337px;
+    margin-top: 77px;
+}
+
+.aboutLeft {
+    width: 400px;
+    height: 337px;
+    float: left;
+}
+
+.product {
+    width: 350px;
+    height: 100%;
+    margin-left: 40px;
+}
+
+.aboutLeft p {
+    line-height: 35px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.aboutLeft p:nth-child(1) {
+    font-size: 20px;
+    width: 320px;
+    height: 40px;
+    padding-top: 30px;
+    border-bottom: 3px solid #5b4c5c;
+}
+
+.aboutRight {
+    width: 299px;
+    height: 337px;
+    border: 2px solid #bab4bb;
+    float: right;
+}
+
+.aboutRight img {
+    width: 280px;
+    height: 321px;
+    margin: 9px 9px 9px 10px;
+}
+
+/*mySkill start*/
+.mySkill {
+    width: 100%;
+    height: 768px;
+    margin-top: 100px;
+    background: #F8F8F8;
+
+}
+
+.mySkillInner {
+    width: 900px;
+    height: 100%;
+    margin: auto;
+}
+
+.skillText {
+    text-align: center;
+    color: #372d38;
+    font-size: 25px;
+    padding-top: 100px;
+}
+
+.press_list {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+.press_list > li {
+    width: 50%;
+    float: left;
+    padding: 0 30px;
+    box-sizing: border-box;
+    background-clip: content-box;
+    margin-bottom: 40px;
+}
+
+.press_list_cls {
+    font-size: 20px;
+    color: #372d38;
+    opacity: .7;
+    margin-bottom: 10px;
+    display: block;
+    text-shadow: 0px 0px 10px #fff;
+}
+
+.press_list > li > .long {
+    width: 100%;
+    height: 10px;
+    background: black;
+    border-bottom: 2px solid #666;
+    border-right: 2px solid #666;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 0 0 10px black;
+}
+
+.press_list > li > .long > div {
+    width: 50%;
+    height: 100%;
+    border-radius: 4px;
+    background: #E88988;
+    /*box-shadow:0 0 10px , 0px 0px 5px 5px #051a2b;*/
+}
+
+.press_list > li:nth-child(1) > .long > div {
+    width: 85%;
+}
+
+.press_list > li:nth-child(2) > .long > div {
+    width: 85%;
+}
+
+.press_list > li:nth-child(3) > .long > div {
+    width: 90%;
+}
+
+.press_list > li:nth-child(4) > .long > div {
+    width: 80%;
+}
+
+.press_list > li:nth-child(5) > .long > div {
+    width: 75%;
+}
+
+.press_list > li:nth-child(6) > .long > div {
+    width: 70%;
+}
+
+.press_list > li:nth-child(7) > .long > div {
+    width: 80%;
+}
+
+.press_list > li:nth-child(8) > .long > div {
+    width: 86%;
+}
+
+.press_list > li:nth-child(9) > .long > div {
+    width: 80%;
+}
+
+.press_list > li:nth-child(10) > .long > div {
+    width: 70%;
+}
+
+.press_list > li:nth-child(11) > .long > div {
+    width: 80%;
+}
+
+.press_list > li:nth-child(12) > .long > div {
+    width: 90%;
+}
+
+/*Productions start*/
+.Productions {
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+}
+
+.aboutCenter .works {
+    text-align:center;
+    padding-top:45px;
+    color:#372d38;
+    font-size:25px;
+}
+
+#lbtWrap {
+    width:874px;
+    height:531px;
+    overflow:hidden;
+    margin:50px auto;
+}
+
+.lvProduct {
+    width: 874px;
+    height: 531px;
+    display: block;
+}
+
+.lvProduct li {
+    width: 290px;
+    height: 265px;
+    float: left;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    transition: all 1s;
+
+}
+
+.lvProduct li:hover img {
+    transform: translateX(-10px);
+    overflow: hidden;
+}
+
+.lvProduct li img {
+    width: 120%;
+    height: 100%;
+    transition: all 0.4s;
+    overflow: hidden;
+}
+
+.oneInner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(230, 78, 80, 0.35);
+    opacity: 0;
+    transform: translateY(265px);
+}
+
+.oneInner:hover p {
+    transform: translateY(40px);
+}
+
+.oneInner p {
+    text-align: center;
+    color: #fff;
+    line-height: 200px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: all 1s;
+    font-weight: bold;
+    text-shadow: 0 0 10px #000;
+    position: absolute;
+    top: 0px;
+    left: 100px;
+}
+
+.twoInner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(230, 78, 80, 0.35);
+    opacity: 0;
+    transform: translateY(-265px);
+}
+
+.threeInner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(230, 78, 80, 0.35);
+    opacity: 0;
+    transform: translateX(-265px);
+}
+
+.fourInner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(230, 78, 80, 0.35);
+    opacity: 0;
+    transform: translateX(265px);
+}
+
+.two {
+    width: 290px;
+    height: 265px;
+    float: left;
+    background-size: cover;
+    position: relative;
+    margin-left: 1px;
+}
+
+.three {
+    width: 290px;
+    height: 265px;
+    float: left;
+    background-size: cover;
+    position: relative;
+    margin-left: 1px;
+}
+
+.four {
+    width: 290px;
+    height: 265px;
+    float: left;
+    background-size: cover;
+    position: relative;
+}
+
+.five {
+    width: 290px;
+    height: 265px;
+    float: left;
+    background-size: cover;
+    position: relative;
+    margin-left: 1px;
+}
+
+.six {
+    width: 290px;
+    height: 265px;
+    float: left;
+    background-size: cover;
+    position: relative;
+    margin-left: 1px;
+}
+
+.lvProduct li:hover {
+    transition: all 1s;
+
+}
+
+.lvProduct li:hover .oneInner {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all .7s;
+}
+
+.lvProduct li:hover .twoInner {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all .7s;
+}
+
+.lvProduct li:hover.threeInner {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all .7s;
+}
+
+.lvProduct li:hover.fourInner {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all .7s;
+}
+
+.lvProduct li {
+    float: left;
+    margin-bottom: 1px;
+}
+
+/*myHeart start*/
+.myHeart {
+    width: 100%;
+    height: 768px;
+    background: #F8F8F8;
+
+}
+
+.myHeartInner {
+    width: 900px;
+    height: 100%;
+    margin: auto;
+}
+
+.heartNodeA {
+    width: 100%;
+    height: 175px;
+    margin: 20px 0 0 0;
+    transition: all .7s;
+}
+
+.txetNode {
+    width: 215px;
+    height: 170px;
+    border-right: 2px solid #ADA5AD;
+    float: left;
+}
+
+.txetNode p {
+    text-align: center;
+    color: #5B4C5C;
+}
+
+.marTxt {
+    padding-top: 75px;
+    font-size: 20px;
+}
+
+.janTxt {
+    padding-top: 10px;
+}
+
+.longTextBox {
+    width: 600px;
+    height: 145px;
+    float: left;
+    margin: 15px 0 0 45px;
+}
+
+.longTextBox p {
+    line-height: 30px;
+    font-size: 14px;
+    color: #5B4C5C;
+}
+
+.longTextBox p:nth-child(1) {
+    padding-top: 30px;
+}
+
+/*footer start*/
+.footer {
+    width: 100%;
+    height: 587px;
+    background: #181818;
+    float: left;
+    position: relative;  
+}
+
+.footerInner {
+    width:960px;
+    height: 100%;
+    margin:auto; 
+    overflow: hidden;
+}
+
+.massage {
+     margin-top:50px;
+     width:100%;
+     height:420px;
+}
+.masLeft{
+	width:400px;
+	height:100%;
+	float:left;
+}
+.qq{
+	width:242px;
+	height:257px;
+	margin-top:15px;
+}
+.masRight{
+	width:460px;
+	height:100%;
+	float:right;
+}
+.masBox{
+   width:410px;
+   height:50px;
+   margin-bottom: 25px;
+}
+
+.aeecss {
+    color: #fff;
+    font-size: 20px;
+    float:left;
+    line-height:50px;
+}
+.youName{
+	width:300px;
+	height:38px;
+	border-bottom: 2px solid #fff;
+	float:right;
+	outline: none;
+	background: transparent;
+	color:#fff;
+	line-height:38px;
+
+}
+
+.aboutCenter .deal {
+    text-align: center;
+    padding-top: 45px;
+    color: #ffeee3;
+    font-size: 25px;
+}
+
+.lines {
+    width: 76px;
+    height: 2px;
+    background: #ffeee3;
+    margin: 22px auto;
+}
+
+.smalls {
+    text-align: center;
+    font-size: 14px;
+    color: #ffeee3;
+}
+
+.copys{
+	cursor: pointer;
+	margin-top:20px;
+
+}
+
+.reedom{
+    width: 20px;
+    height: 25px;
+    float: left;
+    margin-top: 10px;
+}
+
+.destiny{
+    width: 20px;
+    height: 25px;
+    float: left;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.passion{
+    width: 20px;
+    height: 25px;
+    float: left;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.cherish{
+    width: 25px;
+    height:25px;
+    float: left;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.send {
+    width: 150px;
+    height: 50px;
+    float: right;
+    margin-left: 30px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background: #fff;
+}
+
+.send a {
+    color: #000;
+}
+
+.returTop p {
+    width: 15px;
+    height: 15px;
+    border-bottom: 5px solid #ffffff;
+    border-left: 5px solid #ffffff;
+    transform: rotate(135deg);
+    position: absolute;
+    left: 20px;
+    top: 25px;
+    background: transparent;
+    line-height: 60px;
+    text-align: center;
+    font-size: 14px;
+    color: #000;
+    font-weight: bold;
+}
+
+.returTop {
+    position: absolute;
+    right:100px;
+    bottom: 40px;
+    background: #e74c3c;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    -webkit-animation: pulse 1s linear 0s infinite alternate;
+}
+@keyframes pulse {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+    }
+    to {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    }
+}
+/*footer end*/

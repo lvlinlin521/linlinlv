@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<style>
+        #wrap{ width:600px; height:400px; margin:0 auto; }
+        #wrap div{ width:100px; height:100px; float:left; margin:10px 0 0 10px; background:url("img/se_1.gif");text-align:center; font:24px/100px "Arial Black", Gadget, sans-serif; color:white; position:relative; }
+        #wrap div img{ position:absolute; top:0; left:0; z-index:1}
+        #wrap div span{ z-index:99;}
+</style>
+</head>
+<body>
+<div id="wrap">
+</div>
+<input type="button" value="更多的色子">
+<input type="button" value="摇色子">
+<input type="button" value="更少的色子">
+<input type="button" value="stop">
+<p><span id="oSpan"></span>色子</p>
+<p>总计<span id="oSpan2"></span></p>
+<script type="text/javascript">
+    var oInput=document.getElementsByTagName('input');
+    var wrap=document.getElementById('wrap');
+    var oSpan=document.getElementById('oSpan');
+    var oSpan2=document.getElementById('oSpan2');
+    var stop=document.getElementById('stop');
+    var timer=null;
+    var arr=[];
+    var k=0;
+    oSpan.innerHTML=0;
+    oSpan2.innerHTML=0;
+    function random(min,max){
+        return parseInt(Math.random()*((max+1)-min)+min);
+    };
+    function fn_one(){
+        var ran=random(1,6);
+        var div=document.createElement('div');
+        k+=ran;
+        arr.push(ran);
+        var long=wrap.children.length;
+        div.innerHTML+='<img src="img/'+ran+'.gif">'
+        if(long==12){
+            return
+        }else{
+            oSpan.innerHTML=long+1;
+            wrap.appendChild(div);
+        }
+        oSpan2.innerHTML=k;
+    }
+    function fn_two(){
+        var long=wrap.children.length;
+        arr.pop();
+        k=0;
+        for(var i=0;i<arr.length;i++){
+            arr.push();
+            k+=arr[i];
+        }
+        if(long<1){
+            return
+        }else{
+            oSpan.innerHTML=arr.length;
+            oSpan2.innerHTML=k;
+            wrap.removeChild(wrap.children[arr.length]);
+        }
+    }
+    oInput[0].onclick=function(){
+       fn_one();
+    };
+    function time(){
+        var long=wrap.children.length;
+        var n=0;
+        k=0;
+        arr=[];
+        for(var i=0;i<long;i++){
+            n=random(1,6);
+            wrap.children[i].innerHTML+='<img src="img/'+n+'.gif">';
+            oSpan.innerHTML=long;
+            k+=n;
+            oSpan2.innerHTML=k;
+            arr.push(n);
+        }
+    }
+    oInput[1].onclick=function(){
+        clearInterval(timer)
+        timer=setInterval(time,3e1)
+    };
+    oInput[2].onclick=function(){
+        fn_two()
+    };
+    oInput[3].onclick=function(){
+        clearInterval(timer)
+    }
+</script>
+</body>
+</html>

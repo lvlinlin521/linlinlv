@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <style>
+        *{ padding:0; margin:0}
+        #wrap{ width:275px; height:275px; background:#CCC; border:1px solid black; position:absolute; left:50%; top:50%; margin:-150px 0 0 -150px; padding:25px 0 0 25px}
+        #allMount{ width:240px; height:30px; background:white; border:1px solid black; float:left; font:20px/30px Arial, Helvetica, sans-serif; padding-left:10px; overflow:hidden}
+        #con{ width:250px; height:220px; background:white; border:1px solid black; float:left; margin-top:10px; }
+        #con div{ width:40px; height:40px; font:16px/40px Arial, Helvetica, sans-serif; color:black; background:#ccc; text-align:center; float:left; margin:8px 0 0 8px; cursor:pointer;alpha(opacity:100); opacity:100}
+    </style>
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>自制计算器</title>
+</head>
+<body>
+<div id="wrap">
+    <div id="allMount"></div>
+    <div id="con">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>0</div>
+        <div>+</div>
+        <div>-</div>
+        <div>*</div>
+        <div>/</div>
+        <div>%</div>
+        <div>=</div>
+        <div>c</div>
+        <div>←</div>
+    </div>
+</div>
+</body>
+<script>
+    var allMount=document.getElementById('allMount');
+    var con=document.getElementById('con');
+    con.onmousedown=function(){
+        return false
+    }
+    con.onclick=function(){
+        var e=event||arguments[0];
+        var target=e.srcElement||e.target;
+        var inner=target.innerHTML;
+        if(isNaN(Number(inner))){
+            if(inner=="="){
+                if(allMount.innerHTML!=""&&isNaN(Number(allMount.innerHTML.charAt(allMount.innerHTML.length-1)))==false){
+                    if(allMount.innerHTML.indexOf("/0")!=-1||allMount.innerHTML.indexOf("%0")!=-1){
+                        allMount.innerHTML="不支持这样做!";
+                    }else if(((allMount.innerHTML.startsWith("*")||allMount.innerHTML.startsWith("/"))||allMount.innerHTML.startsWith("%"))&&allMount.innerHTML.length>=2){
+                        allMount.innerHTML=0;
+                    }else{
+                        allMount.innerHTML=eval(allMount.innerHTML);
+                    }
+                }else{
+                    allMount.innerHTML=0; 
+                }
+            }
+            if(inner=="←"){
+                if(allMount.innerHTML!=""){
+                    allMount.innerHTML=allMount.innerHTML.substr(0,allMount.innerHTML.length-1);
+                }
+            }
+            if(inner=="c"){
+                allMount.innerHTML="";
+            }
+            if(((inner=="+"||inner=="-")||inner=="*")||inner=="/"){
+                if(((allMount.innerHTML.endsWith('+')||allMount.innerHTML.endsWith('-'))||allMount.innerHTML.endsWith('*'))||allMount.innerHTML.endsWith('/')){
+                    allMount.innerHTML=allMount.innerHTML.substr(0,allMount.innerHTML.length-1)+inner;
+                }else if(allMount.innerHTML=="不支持这样做!"){
+                    allMount.innerHTML=inner;
+                }else{
+                    allMount.innerHTML+=inner;
+                }
+            }
+            if(inner=="%"){
+                if(((allMount.innerHTML.endsWith('+')||allMount.innerHTML.endsWith('-'))||allMount.innerHTML.endsWith('*'))||allMount.innerHTML.endsWith('/')){
+
+                }else{
+                    allMount.innerHTML=0;
+                }
+            }
+        }else if(isNaN(Number(inner))==false&&inner==0){ 
+            if(allMount.innerHTML=="0"){
+                allMount.innerHTML=0;
+            }else if(allMount.innerHTML=="不支持这样做!"){
+                allMount.innerHTML=0;
+            }else{
+                allMount.innerHTML+=inner;
+            }
+        }else if(isNaN(Number(inner))==false&&inner!="0"){
+            if(allMount.innerHTML=="0"){
+                allMount.innerHTML=inner;
+            }else if(allMount.innerHTML=="不支持这样做!"){
+                allMount.innerHTML=inner;
+            }else{
+                allMount.innerHTML+=inner;
+            }
+        }
+    }
+
+</script>
+</html>
